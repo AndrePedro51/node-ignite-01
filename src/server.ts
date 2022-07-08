@@ -6,12 +6,14 @@
 //--inspect para conectar o debugger na nossa aplicação
 //Alterar o launsh.json do debug. Alterar o Type para node. Muda o request para attach e apaga o program, serve para encapsular o debug na nossa aplicação.
 
+import "reflect-metadata";
 import express from 'express';
 import { router } from './routes';
 import swaggerUi from 'swagger-ui-express';
 import swaggerFile from "./swagger.json";
 
 import "./database";
+import "./shared/container"
 
 const app = express();
 
